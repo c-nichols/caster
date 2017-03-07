@@ -27,7 +27,7 @@ class NPPRule(MergeRule):
             "remove style":                         R(Mouse("right")+Key("down:6/5, right/5, down:5/5, enter"), rdescript="Notepad++: Remove Style"),
             
             "preview in browser":                   R(Key("cas-r"), rdescript="Notepad++: Preview In Browser"),
-            
+            "last tab":                             R(Key("c-tab"), rdescript="Notepad++: Last Tab"),
             # requires function list plug-in:
             "function list":                        R(Key("cas-l"), rdescript="Notepad++: Function List"),
         }

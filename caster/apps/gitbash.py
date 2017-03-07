@@ -34,14 +34,14 @@ class GitBashRule(MergeRule):
         "bug fix commit <n>":    R(Mimic("commit")+Text("fixes #%(n)d ")+Key("backspace"), rdescript="GIT: Bug Fix Commit"),
         "reference commit <n>":  R(Mimic("commit")+Text("refs #%(n)d ")+Key("backspace"), rdescript="GIT: Reference Commit"),
         "checkout":         R(Text( "git checkout " ), rdescript="GIT: Check Out"),
-        "branch":         R(Text( "git branch" )+Key("enter"), rdescript="GIT: Branch"),
+        "branch":         R(Text( "git branch "), rdescript="GIT: Branch"),
         "remote":         R(Text( "git remote " ), rdescript="GIT: Remote"),
         "merge":            R(Text( "git merge " ), rdescript="GIT: Merge"),
         "merge tool":       R(Text( "git mergetool")+Key("enter"), rdescript="GIT: Merge Tool"),
         "fetch":            R(Text( "git fetch" )+Key("enter"), rdescript="GIT: Fetch"),
         
         
-        "(get push | push)":R(Text( "git push" )+Key("enter"), rdescript="GIT: Push"),
+        "(get push | push)":R(Text( "git push" ), rdescript="GIT: Push"),
         "pull":             R(Text( "git pull" )+Key("enter"), rdescript="GIT: Pull"),
         "CD up":            R(Text( "cd .." )+Key("enter"), rdescript="GIT: Up Directory"),
         "CD":               R(Text( "cd " ), rdescript="GIT: Navigate Directory"),
@@ -65,6 +65,7 @@ class GitBashRule(MergeRule):
         
         
         "stash":            R(Text("git stash")+Key("enter"), rdescript="GIT: Stash"),
+        "stash pop":        R(Text("git stash pop "), rdescript="GIT: Stash pop"),
         "stash apply [<n>]":R(Text("git stash apply")+Function(_apply), rdescript="GIT: Stash Apply"),
         "stash list":       R(Text("git stash list")+Key("enter"), rdescript="GIT: Stash List"),
         "stash branch":     R(Text("git stash branch NAME"), rdescript="GIT: Stash Branch"),
@@ -80,6 +81,14 @@ class GitBashRule(MergeRule):
         "search recursive count": R(Text("grep -rinH \"PATTERN\" * | wc -l"), rdescript="GREP: Search Recursive Count"),
         "search recursive filetype": R(Text("find . -name \"*.java\" -exec grep -rinH \"PATTERN\" {} \\;"), rdescript="GREP: Search Recursive Filetype"),
         "to file":          R(Text(" > FILENAME"), rdescript="Bash: To File"),
+
+        "system install":   R(Text("sudo apt-get install "), rdescript="apt install"),
+        "node install":     R(Text("npm install "), rdescript="npm install"),
+        "soup":             R(Text("sudo "), rdescript="sudo"),
+        "mood":             R(Text("mv "), rdescript="mv"),
+        "explode":          R(Text("tar -xzvf "), rdescript="tar -xzvf"),
+        "staged":           R(Text("git diff --staged") + Key("enter"), rdescript="DIF staged"),
+
         }
     extras = [
               IntegerRefST("n", 1, 10000),

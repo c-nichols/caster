@@ -33,8 +33,24 @@ class JetbrainsRule(MergeRule):
         "select ex down":           R(Key("cs-w"), rdescript="JetBrains: entitled command"),
         "search everywhere":        R(Key("shift, shift"), rdescript="JetBrains: Search Everywhere"),
         "find in current":          R(Key("cs-f"), rdescript="JetBrains: Find In Current"),
-        "go to line":               R(Key("c-g"), rdescript="JetBrains: Go To Line"), 
+        "go to line":               R(Key("c-g"), rdescript="JetBrains: Go To Line"),
+
+        "go to definition":         R(Key("f12"), rdescript="JetBrains: Go To Definition"),
+        "close tab":                R(Key("c-f4"), rdescript="JetBrains: Close Tab"),
+        "last tab":                 R(Key("c-tab"), rdescript="JetBrains: Last Tab"),
+        "open file":                R(Key("cs-n"), rdescript="JetBrains: open file"),
+        "find in files":            R(Key("cs-f"), rdescript="JetBrains: Find In Files"),
+        "Klink":                    R(Key("ctrl:down, tab"), rdescript="jet brains: show switcher"),
+        "clank":                    R(Key("ctrl:up"), rdescript="jet brains: end switcher"),
+        "focus code":               R(Key("escape"), rdescript="JetBrains: ffocus on code"),
+        "focus find":               R(Key("ctrl:down, tab/15, 3, ctrl:up"), rdescript="JetBrains: ffocus on find"),
+        "focus project":            R(Key("ctrl:down, tab/15, 1, ctrl:up"), rdescript="JetBrains: ffocus on project"),
+        "hide find":                R(Key("ctrl:down, tab/15, 3, ctrl:up, s-escape"), rdescript="JetBrains: hide find panel"),
+        "hide project":             R(Key("ctrl:down, tab/15, 1, ctrl:up, s-escape"), rdescript="JetBrains: hhide project panel"),
+        "show project":             R(Key("a-1/15, escape"), rdescript="JetBrains: show project panel"),
+        "show find":                R(Key("a-3/15, escape"), rdescript="JetBrains: show find panel"),
         }
+
     extras = [
               Dictation("text"),
               Dictation("mim"),

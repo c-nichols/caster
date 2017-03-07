@@ -173,6 +173,7 @@ def init_default_values():
                        ("notepadplusplus", True),
                        ("sqldeveloper", True),
                        ("sublime", True),
+                       ("slack", True),
                        ("visualstudio", True),
                        ("winword", True),
                        ("wsr", True),

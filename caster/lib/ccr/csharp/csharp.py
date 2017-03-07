@@ -4,7 +4,7 @@ Created on Sep 26, 2015
 @author: synkarius
 '''
 
-from dragonfly import Key, Mimic, Text
+from aenea.strict import Key, Mimic, Text
 
 from caster.lib import control
 from caster.lib.ccr.standard import SymbolSpecs

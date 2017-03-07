@@ -3,7 +3,7 @@ Created on Sep 2, 2015
 
 @author: synkarius
 '''
-from dragonfly import Key, Text
+from aenea.strict import Key, Text
 
 from caster.lib import control
 from caster.lib.ccr.standard import SymbolSpecs

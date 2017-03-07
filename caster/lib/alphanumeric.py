@@ -1,4 +1,4 @@
-from dragonfly import (Key, Text, Choice)
+from aenea.strict import (Key, Text, Choice)
 
 from caster.lib import settings
 

@@ -8,7 +8,7 @@ The following is a very simple Dragonfly rule:
 
 ```
 # the following line imports all the dragonfly stuff we'll be using -- obviously you must have Dragonfly installed
-from dragonfly import *
+from aenea.strict import *
 
 # now we make our MappingRule object with only two commands
 class MyRule(MappingRule):
@@ -30,7 +30,7 @@ Done. Name this file `_example1.py`, put it in your Natlink `User Directory` fol
 Okay, now suppose you want to do something more complex than just pressing pre-set key sequences or typing out pre-set text. This is where `extra`s come in. Below is the same rule, but using extras.
 
 ```
-from dragonfly import *
+from aenea.strict import *
 
 class MyRule(MappingRule):
   mapping = {
@@ -57,7 +57,7 @@ With this rule, you can say "press key arch" and "a" will be pressed, or "press 
 Suppose you want to leave words out sometimes. You can use square brackets to make parts of the `spec`, including the extras, optional. However, if you make extras optional, you should set sensible `default`s or you will get errors when you omit said optional extras. Here is a rule with commands with specs with optional parts:
 
 ```
-from dragonfly import *
+from aenea.strict import *
 
 class MyRule(MappingRule):
   mapping = {
@@ -87,7 +87,7 @@ It is nearly identical to the rule in the previous section, except that now to t
 The Dragonfly Key, Mouse, and Text actions will get you pretty far, but what if you need to create more complex behavior? For example, suppose you want to make XMLRPC calls or execute conditional logic based on the specifics of your command? This is where Dragonfly's Function action becomes useful.
 
 ```
-from dragonfly import *
+from aenea.strict import *
 
 def my_fn(my_key):
   '''some custom logic here'''
@@ -114,7 +114,7 @@ In this example, we defined a function called "my_fn". Any extras in the spec of
 
 Actions can be combined with the `+` operator. (They can also be repeated a dynamic number of times via the `*` operator and Dragonfly's Repeat class.) Below, a Key action and a Function action are combined. Both will execute when the spec is spoken.
 ```
-from dragonfly import *
+from aenea.strict import *
 
 def my_fn(my_key):
   '''some custom logic here'''

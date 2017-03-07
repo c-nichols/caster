@@ -3,7 +3,7 @@ Created on Jun 7, 2015
 
 @author: dave
 '''
-from dragonfly import Pause, ActionBase
+from aenea.strict import Pause, ActionBase
 
 from caster.lib import settings
 

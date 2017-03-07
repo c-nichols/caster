@@ -5,7 +5,7 @@ Created on Sep 1, 2015
 '''
 import re
 
-from dragonfly import MappingRule, Pause, Function
+from aenea.strict import MappingRule, Pause, Function
 
 
 class TokenSet(object):

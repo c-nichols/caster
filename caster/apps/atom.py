@@ -3,7 +3,7 @@ __author__ = 'Zone22'
 Command-module for Atom
 Official Site "https://atom.io/"
 """
-from dragonfly import (Grammar, AppContext, MappingRule,
+from aenea.strict import (Grammar, AppContext, MappingRule,
                        Dictation, IntegerRef,
                        Key, Text, Repeat, Pause)
 from dragonfly.actions.action_mimic import Mimic

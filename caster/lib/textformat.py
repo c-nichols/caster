@@ -1,10 +1,9 @@
 import time
 import sys
 
-from dragonfly.actions.action_key import Key
-from dragonfly.actions.action_text import Text
-
 from caster.lib import settings
+
+from aenea.strict import Key, Text
 
 _CAPITALIZATION, _SPACING = 0, 0
 
@@ -21,6 +20,7 @@ def normalize_text_format(capitalization, spacing):
     2 spine- words-with-hyphens
     3 snake- words_with_underscores
     '''
+
     if capitalization == 0: 
         capitalization = 5
     if spacing == 0 and capitalization == 3: 

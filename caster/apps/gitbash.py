@@ -9,15 +9,17 @@ Command-module for git
 """
 #---------------------------------------------------------------------------
 
-from dragonfly import (Grammar, AppContext, Mimic,
-                       Key, Text, Function)
-
 from caster.lib import control
 from caster.lib import settings
 from caster.lib.dfplus.additions import IntegerRefST
 from caster.lib.dfplus.merge import gfilter
 from caster.lib.dfplus.merge.mergerule import MergeRule
 from caster.lib.dfplus.state.short import R
+
+from aenea.strict import (Grammar, AppContext, Mimic,
+                       Key, Text, Function)
+from aenea import AeneaContext, ProxyAppContext
+
 
 def _apply(n):
     if n!=0:
@@ -98,12 +100,19 @@ class GitBashRule(MergeRule):
 
 #---------------------------------------------------------------------------
 
-context = AppContext(executable="\\sh.exe")
+context1 = AppContext(executable="\\sh.exe")
 context2 = AppContext(executable="\\bash.exe")
 context3 = AppContext(executable="\\cmd.exe")
 context4 = AppContext(executable="\\mintty.exe")
+local_context  = context1 | context2 | context3 | context4
 
-grammar = Grammar("MINGW32", context=(context | context2 | context3 | context4))
+context = AeneaContext(
+    ProxyAppContext(cls='Gnome-terminal'),
+    local_context
+    )
+
+
+grammar = Grammar("MINGW32", context=(context))
 
 if settings.SETTINGS["apps"]["gitbash"]:
     if settings.SETTINGS["miscellaneous"]["rdp_mode"]:

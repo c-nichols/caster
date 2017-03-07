@@ -1,4 +1,4 @@
-from dragonfly import Function
+from aenea.strict import Function
 
 from caster.lib import control, alphanumeric
 from caster.lib.dfplus.additions import IntegerRefST

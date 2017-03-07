@@ -1,11 +1,12 @@
-from dragonfly import (Grammar, AppContext, Dictation, Key)
-
 from caster.lib import control
 from caster.lib import settings
 from caster.lib.dfplus.additions import IntegerRefST
 from caster.lib.dfplus.merge import gfilter
 from caster.lib.dfplus.merge.mergerule import MergeRule
 from caster.lib.dfplus.state.short import R
+
+from aenea.strict import (Grammar, AppContext, Dictation, Key)
+from aenea import AeneaContext, ProxyAppContext
 
 
 class JetbrainsRule(MergeRule):
@@ -61,10 +62,14 @@ class JetbrainsRule(MergeRule):
 
 #---------------------------------------------------------------------------
 
-context = AppContext(executable="idea", title="IntelliJ") \
+local_context = AppContext(executable="idea", title="IntelliJ") \
           | AppContext(executable="idea64", title="IntelliJ") \
           | AppContext(executable="studio64") \
           | AppContext(executable="pycharm")
+context = AeneaContext(
+    ProxyAppContext(cls='jetbrains-pycharm-ce'),
+    local_context
+    )
 grammar = Grammar("IntelliJ + Android Studio + PyCharm", context=context)
 
 if settings.SETTINGS["apps"]["jetbrains"]:

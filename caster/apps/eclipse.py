@@ -2,7 +2,7 @@
 
 import re
 
-from dragonfly import (Grammar, AppContext,
+from aenea.strict import (Grammar, AppContext,
                        Dictation, Key, Text, Repeat, Pause)
 from dragonfly.actions.action_function import Function
 from dragonfly.actions.action_paste import Paste

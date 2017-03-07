@@ -3,7 +3,6 @@ Created on Sep 1, 2015
 
 @author: synkarius
 '''
-from dragonfly import Repeat, Function, Key, Dictation, Choice, Mouse, MappingRule
 
 from caster.lib import context, navigation, alphanumeric, textformat
 from caster.lib import control
@@ -17,6 +16,9 @@ from dragonfly.actions.action_mimic import Mimic
 from caster.lib.ccr.standard import SymbolSpecs
 
 _NEXUS = control.nexus()
+
+from aenea.strict import Repeat, Function, Key, Dictation, Choice, MappingRule
+
 
 class NavigationNon(MappingRule):
     mapping = {
@@ -39,13 +41,13 @@ class NavigationNon(MappingRule):
         'kick mid':                         R(Function(navigation.kick_middle, nexus=_NEXUS), rdescript="Mouse: Middle Click"),
         'psychic':                          R(Function(navigation.kick_right, nexus=_NEXUS), rdescript="Mouse: Right Click"),
         '(kick double|double kick)':        R(Function(navigation.kick, nexus=_NEXUS) * Repeat(2), rdescript="Mouse: Double Click"),
-        "shift right click":                R(Key("shift:down") + Mouse("right") + Key("shift:up"), rdescript="Mouse: Shift + Right Click"),
+        #"shift right click":                R(Key("shift:down") + Mouse("right") + Key("shift:up"), rdescript="Mouse: Shift + Right Click"),
         "curse <direction> [<direction2>] [<nnavi500>] [<dokick>]": R(Function(navigation.curse), rdescript="Curse"),
         "scree <direction> [<nnavi500>]":   R(Function(navigation.wheel_scroll), rdescript="Wheel Scroll"),
       
-        "colic":                            R(Key("control:down") + Mouse("left") + Key("control:up"), rdescript="Mouse: Ctrl + Left Click"),
-        "garb [<nnavi500>]":                R(Mouse("left")+Mouse("left")+Key("c-c")+Function(navigation.clipboard_to_file, nexus=_NEXUS), rdescript="Highlight @ Mouse + Copy"),
-        "drop [<nnavi500>]":                R(Mouse("left")+Mouse("left")+Function(navigation.drop, nexus=_NEXUS), rdescript="Highlight @ Mouse + Paste"),
+        #"colic":                            R(Key("control:down") + Mouse("left") + Key("control:up"), rdescript="Mouse: Ctrl + Left Click"),
+        #"garb [<nnavi500>]":                R(Mouse("left")+Mouse("left")+Key("c-c")+Function(navigation.clipboard_to_file, nexus=_NEXUS), rdescript="Highlight @ Mouse + Copy"),
+        #"drop [<nnavi500>]":                R(Mouse("left")+Mouse("left")+Function(navigation.drop, nexus=_NEXUS), rdescript="Highlight @ Mouse + Paste"),
         
         "sure stoosh":                      R(Key("c-c"), rdescript="Simple Copy"),
         "sure cut":                         R(Key("c-x"), rdescript="Simple Cut"),

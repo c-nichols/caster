@@ -6,7 +6,8 @@ from ctypes import windll
 from subprocess import Popen
 import time
 
-from dragonfly import (Key, Text, Choice, Mouse, monitors)
+from dragonfly import monitors
+from aenea.strict import (Key, Text, Choice, Mouse)
 import dragonfly
 import win32clipboard
 

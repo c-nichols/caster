@@ -8,7 +8,6 @@ import logging
 logging.basicConfig()
 
 import time
-from dragonfly import (Key, Function, Grammar, Playback, Dictation, Choice, Pause)
 from caster.lib.ccr.standard import SymbolSpecs
 
 def _wait_for_wsr_activation():
@@ -64,7 +63,7 @@ except:
     
     utilities.simple_log()
 
-        
+from aenea.strict import (Key, Function, Grammar, Playback, Dictation, Choice, Pause)
 
 
 def change_monitor():
@@ -104,9 +103,9 @@ class MainRule(MergeRule):
     
     
     # mouse alternatives
-    "legion [<monitor>]":           R(Function(navigation.mouse_alternates, mode="legion", nexus=_NEXUS), rdescript="Activate Legion"),
-    "rainbow [<monitor>]":          R(Function(navigation.mouse_alternates, mode="rainbow", nexus=_NEXUS), rdescript="Activate Rainbow Grid"),
-    "douglas [<monitor>]":          R(Function(navigation.mouse_alternates, mode="douglas", nexus=_NEXUS), rdescript="Activate Douglas Grid"),
+    #"legion [<monitor>]":           R(Function(navigation.mouse_alternates, mode="legion", nexus=_NEXUS), rdescript="Activate Legion"),
+    #"rainbow [<monitor>]":          R(Function(navigation.mouse_alternates, mode="rainbow", nexus=_NEXUS), rdescript="Activate Rainbow Grid"),
+    #"douglas [<monitor>]":          R(Function(navigation.mouse_alternates, mode="douglas", nexus=_NEXUS), rdescript="Activate Douglas Grid"),
     
     # ccr de/activation
     "<enable> <name>":              R(Function(_NEXUS.merger.global_rule_changer(), save=True), rdescript="Toggle CCR Module"),

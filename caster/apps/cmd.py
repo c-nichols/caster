@@ -9,7 +9,7 @@ Command-module for git
 """
 #---------------------------------------------------------------------------
 
-from dragonfly import (Grammar, AppContext, MappingRule,
+from aenea.strict import (Grammar, AppContext, MappingRule,
                        Key, Text)
 
 from caster.lib import control

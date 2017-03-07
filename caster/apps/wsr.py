@@ -1,5 +1,5 @@
 
-from dragonfly import (Grammar, Function)
+from aenea.strict import (Grammar, Function)
 
 from caster.lib import utilities, settings
 from caster.lib.dfplus.merge import gfilter

@@ -9,7 +9,7 @@ Command-module for word
 """
 #---------------------------------------------------------------------------
 
-from dragonfly import (Grammar, AppContext, MappingRule,
+from aenea.strict import (Grammar, AppContext, MappingRule,
                        Dictation, Key)
 
 from caster.lib import control

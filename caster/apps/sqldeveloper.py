@@ -9,7 +9,7 @@ Command-module for Sql Developer
 """
 #---------------------------------------------------------------------------
 
-from dragonfly import (Grammar, AppContext, Dictation, Key)
+from aenea.strict import (Grammar, AppContext, Dictation, Key)
 
 from caster.lib import control
 from caster.lib import settings

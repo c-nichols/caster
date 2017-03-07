@@ -1,4 +1,4 @@
-from dragonfly import Key, Text, Choice, MappingRule
+from aenea.strict import Key, Text, Choice, MappingRule
 
 from caster.lib import control, alphanumeric
 from caster.lib.ccr.standard import SymbolSpecs

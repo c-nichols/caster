@@ -1,4 +1,4 @@
-from dragonfly import (Function, Grammar, AppContext)
+from aenea.strict import (Function, Grammar, AppContext)
 
 from caster.asynch.hmc import h_launch
 from caster.lib import control

@@ -3,7 +3,7 @@ Created on May 27, 2015
 
 @author: dave
 '''
-from dragonfly import ActionBase
+from aenea.strict import ActionBase
 
 from caster.lib import utilities
 from caster.lib.dfplus.merge.selfmodrule import SelfModifyingRule

@@ -22,7 +22,7 @@ To add a new homunculus (pop-up ui window) type:
 '''
 
 def launch(hmc_type, data=None):
-    from dragonfly import (WaitWindow, FocusWindow, Key)
+    from aenea.strict import (WaitWindow, FocusWindow, Key)
     instructions=_get_instructions(hmc_type)
     if data is not None:# and callback!=None:
         instructions.append(data)

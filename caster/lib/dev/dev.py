@@ -2,7 +2,8 @@ from difflib import SequenceMatcher
 from subprocess import Popen
 import time
 
-from dragonfly import (Function, Key, BringApp, Text, WaitWindow, Dictation, Choice, Grammar, MappingRule, Paste)
+from dragonfly import BringApp
+from aenea.strict import (Function, Key, Text, WaitWindow, Dictation, Choice, Grammar, MappingRule, Paste)
 
 from caster.lib import utilities, settings, context, control
 from caster.lib.dev import devgen
@@ -107,9 +108,6 @@ def bring_test():
         BringApp("explorer", settings.SETTINGS["paths"]["BASE_PATH"]).execute()
     except Exception:
         utilities.simple_log()
-
-
-
 
 
 class DevelopmentHelp(MappingRule):

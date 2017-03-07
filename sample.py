@@ -13,7 +13,7 @@
 
 # You can skip down to the next comment, none of this stuff is really important...
 
-from dragonfly import (BringApp, Key, Function, Grammar, Playback,
+from aenea.strict import (BringApp, Key, Function, Grammar, Playback,
                        IntegerRef, Dictation, Choice, WaitWindow, MappingRule, Text)
 
 def my_function(n, text):

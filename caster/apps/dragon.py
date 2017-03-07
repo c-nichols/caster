@@ -1,5 +1,5 @@
 
-from dragonfly import (Grammar, Playback, Key, Dictation, Function)
+from aenea.strict import (Grammar, Playback, Key, Dictation, Function)
 
 from caster.lib import control
 from caster.lib import utilities, settings

@@ -3,7 +3,7 @@ Created on May 30, 2015
 
 @author: dave
 '''
-from dragonfly import Text
+from aenea.strict import Text
 from dragonfly.grammar.grammar_base import Grammar
 
 from caster.lib import control

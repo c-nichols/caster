@@ -1,4 +1,4 @@
-from dragonfly import (Grammar, AppContext, MappingRule,
+from aenea.strict import (Grammar, AppContext, MappingRule,
                        Dictation, IntegerRef, Key)
 
 from caster.lib import settings

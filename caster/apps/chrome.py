@@ -9,7 +9,7 @@ Command-module for Chrome and Firefox
 """
 #---------------------------------------------------------------------------
 
-from dragonfly import (Grammar, AppContext, Dictation, Key, Text, Repeat)
+from aenea.strict import (Grammar, AppContext, Dictation, Key, Text, Repeat)
 
 from caster.lib import control
 from caster.lib import settings

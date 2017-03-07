@@ -11,7 +11,7 @@ Dragonfly is a powerful framework for mapping voice commands to actions. Caster 
 
 A Caster MergeRule is very similar to a Dragonfly MappingRule, but it has a few extra properties and can do things that MappingRules can't easily do. The following is an example of a full Python file containing two MergeRules *and* a MappingRule.
 ```
-from dragonfly import *
+from aenea.strict import *
 
 from caster.lib import control
 from caster.lib.dfplus.merge.mergerule import MergeRule
@@ -61,7 +61,7 @@ In addition to new types of rules, Caster provides new types of actions.
 
 The simplest is `RegisteredAction`. (Type aliased to  `R` for short.) `R` can wrap any Dragonfly action(s) and adds additional functionality to said wrapped action(s). Let's look at a simple example.
 ```
-from dragonfly import *
+from aenea.strict import *
 
 from caster.lib import control
 from caster.lib.dfplus.merge.mergerule import MergeRule
@@ -80,7 +80,7 @@ Two things of note here.
 
 `R` can also be used to mark a command as a part of another command. This is one significant difference between Caster and Dragonfly. Dragonfly commands are once-and-done. Caster commands can interact with other commands which have been spoken in the past or will be spoken in the future. In order to use this functionality, we set the `rspec` property of the `R` action. Like so:
 ```
-from dragonfly import *
+from aenea.strict import *
 
 from caster.lib import control
 from caster.lib.dfplus.merge.mergerule import MergeRule
@@ -99,7 +99,7 @@ control.nexus().merger.add_global_rule(Birds())
 
 In order to do this, the ContextSeeker constructor takes one or both of two arrays of command-searching objects, the "backward" array and the "forward" array. Let's look at a simple example first, a ContextSeeker that looks backward one command for the "favorite bird" command and then prints the rest of the sentence if and only if it finds it.
 ```
-from dragonfly import *
+from aenea.strict import *
 
 from caster.lib import control
 from caster.lib.dfplus.merge.mergerule import MergeRule
@@ -132,7 +132,7 @@ ContextSeekers can look backwards multiple commands, executing conditional logic
 
 ContextSeekers can also look forward. Let's look at an example of a forward-looking command.
 ```
-from dragonfly import *
+from aenea.strict import *
 
 from caster.lib import control
 from caster.lib.dfplus.merge.mergerule import MergeRule
@@ -172,7 +172,7 @@ The `S` object has a lot of options to specify different kinds of behavior. They
  
 That's a lot, so let's see it in action.
 ```
-from dragonfly import *
+from aenea.strict import *
 
 from caster.lib import control
 from caster.lib.dfplus.merge.mergerule import MergeRule
@@ -213,7 +213,7 @@ In this example, each of the `S` objects (except the first) delivers parameters 
  
 Let's look at a few basic AsynchronousActions:
 ```
-from dragonfly import *
+from aenea.strict import *
 
 from caster.lib import control
 from caster.lib.dfplus.merge.mergerule import MergeRule

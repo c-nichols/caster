@@ -1,4 +1,4 @@
-from dragonfly import Function, Choice
+from aenea.strict import Function, Choice
 
 from caster.lib import control, alphanumeric
 from caster.lib.dfplus.merge.ccrmerger import CCRMerger

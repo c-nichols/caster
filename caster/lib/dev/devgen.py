@@ -1,4 +1,4 @@
-﻿from dragonfly import MappingRule, Grammar, Config, Section, Item, Key, Text, Dictation, Mimic
+﻿from aenea.strict import MappingRule, Grammar, Config, Section, Item, Key, Text, Dictation, Mimic
 from caster.lib import settings, utilities
 
 _grammar = Grammar("dev gen")

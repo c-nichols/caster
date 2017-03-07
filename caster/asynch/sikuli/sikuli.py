@@ -1,7 +1,7 @@
 from subprocess import Popen
 import xmlrpclib
 
-from dragonfly import (Grammar, MappingRule, Function, Key)
+from aenea.strict import (Grammar, MappingRule, Function, Key)
 
 from caster.lib import control
 from caster.lib import settings, utilities

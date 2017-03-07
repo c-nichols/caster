@@ -9,7 +9,7 @@ Command-module for MSVC
 """
 #---------------------------------------------------------------------------
 
-from dragonfly import (Grammar, AppContext, Dictation, Key, Repeat)
+from aenea.strict import (Grammar, AppContext, Dictation, Key, Repeat)
 
 from caster.lib import control
 from caster.lib import settings

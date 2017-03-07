@@ -6,7 +6,7 @@ Command-module for Legion
 
 import time
 
-from dragonfly import (Grammar, AppContext, Function,
+from aenea.strict import (Grammar, AppContext, Function,
                        Playback, Choice, MappingRule)
 import win32api
 import win32con

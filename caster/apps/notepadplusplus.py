@@ -9,7 +9,7 @@ Command-module for Notepad++
 """
 #---------------------------------------------------------------------------
 
-from dragonfly import (Grammar, AppContext, Dictation, Mouse, Key, Repeat)
+from aenea.strict import (Grammar, AppContext, Dictation, Mouse, Key, Repeat)
 
 from caster.lib import control
 from caster.lib import settings

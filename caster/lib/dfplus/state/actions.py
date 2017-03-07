@@ -1,9 +1,9 @@
-from dragonfly import ActionBase
-
 from caster.lib import control
 from caster.lib.dfplus.state.stackitems import StackItemRegisteredAction, \
     StackItemSeeker, StackItemAsynchronous
 _NEXUS = control.nexus()
+from aenea.strict import ActionBase
+
 
 class RegisteredAction(ActionBase):
     def __init__(self, base, rspec="default", rdescript="unnamed command (RA)", 

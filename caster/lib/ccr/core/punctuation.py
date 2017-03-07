@@ -1,12 +1,10 @@
-from dragonfly.actions.action_base import Repeat
-from dragonfly.actions.action_key import Key
-from dragonfly.actions.action_text import Text
-
 from caster.lib import control
 from caster.lib.dfplus.additions import IntegerRefST
 from caster.lib.dfplus.merge.ccrmerger import CCRMerger
 from caster.lib.dfplus.merge.mergerule import MergeRule
 from caster.lib.dfplus.state.short import R
+
+from aenea.strict import Key, Text, Repeat
 
 
 class Punctuation(MergeRule):

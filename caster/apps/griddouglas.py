@@ -2,7 +2,7 @@
 Command-module for DouglasGrid
 
 """
-from dragonfly import (Grammar, AppContext, Function, Playback, Choice, MappingRule)
+from aenea.strict import (Grammar, AppContext, Function, Playback, Choice, MappingRule)
 
 from caster.asynch.mouse import grids
 from caster.lib import control

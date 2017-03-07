@@ -3,7 +3,7 @@ Created on Sep 1, 2015
 
 @author: synkarius
 '''
-from dragonfly import Key, Mimic, Text
+from aenea.strict import Key, Mimic, Text
 
 from caster.lib import control
 from caster.lib.ccr.standard import SymbolSpecs
@@ -16,10 +16,10 @@ class CPP(MergeRule):
     pronunciation = "C plus plus"
         
     mapping = {
-        SymbolSpecs.IF:                     R(Key("i, f, lparen, rparen, leftbrace, enter,up,left"), rdescript="C++: If"),
+        SymbolSpecs.IF:                     R(Key("i, f, lparen, rparen, leftbrace, enter, up, left"), rdescript="C++: If"),
         SymbolSpecs.ELSE:                   R(Key("e, l, s, e, leftbrace, enter"), rdescript="C++: Else"),
         #
-        SymbolSpecs.SWITCH:                 R(Text("switch(){\ncase : break;\ndefault: break;")+Key("up,up,left,left"), rdescript="C++: Switch"),
+        SymbolSpecs.SWITCH:                 R(Text("switch(){\ncase : break;\ndefault: break;") + Key("up,up,left,left"), rdescript="C++: Switch"),
         SymbolSpecs.CASE:                   R(Text("case :")+Key("left"), rdescript="C++: Case"),
         SymbolSpecs.BREAK:                  R(Text("break;"), rdescript="C++: Break"),
         SymbolSpecs.DEFAULT:                R(Text("default: "), rdescript="C++: Default"),

@@ -1,5 +1,7 @@
+
 from aenea.strict import (Grammar, AppContext, MappingRule,
                        Dictation, IntegerRef, Key)
+from aenea import AeneaContext, ProxyAppContext
 
 from caster.lib import settings
 from caster.lib.dfplus.additions import IntegerRefST
@@ -29,9 +31,14 @@ class CommandRule(MergeRule):
 
 # ---------------------------------------------------------------------------
 
-context = AppContext(executable="slack")
+context = AeneaContext(
+    ProxyAppContext(cls='Slack'),
+    AppContext(executable="slack")
+    )
+
 grammar = Grammar("slack", context=context)
 grammar.add_rule(CommandRule(name="slack"))
+
 if settings.SETTINGS["apps"]["slack"]:
     if settings.SETTINGS["miscellaneous"]["rdp_mode"]:
         control.nexus().merger.add_global_rule(CommandRule())

@@ -86,10 +86,14 @@ class GitBashRule(MergeRule):
 
         "system install":   R(Text("sudo apt-get install "), rdescript="apt install"),
         "node install":     R(Text("npm install "), rdescript="npm install"),
+        "Python install":   R(Text("pip install "), rdescript="pip install"),
         "soup":             R(Text("sudo "), rdescript="sudo"),
         "mood":             R(Text("mv "), rdescript="mv"),
         "explode":          R(Text("tar -xzvf "), rdescript="tar -xzvf"),
         "staged":           R(Text("git diff --staged") + Key("enter"), rdescript="DIF staged"),
+        "scrap":            R(Text("c-charlie"), rdescript="ABORT"),
+        "flow to":          R(Text(" | "), rdescript=" pipe"),
+        "make":             R(Text("make "), rdescript="make"),
 
         }
     extras = [

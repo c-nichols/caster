@@ -51,8 +51,8 @@ class Python(MergeRule):
         SymbolSpecs.FUNCTION:           R(Text("def "), rdescript="Python: Function"),        
         SymbolSpecs.CLASS:              R(Text("class "), rdescript="Python: Class"),
         #
-        SymbolSpecs.COMMENT:            R(Text( "#" ), rdescript="Python: Add Comment"),
-        SymbolSpecs.LONG_COMMENT:       R(Text("''''''") + Key("left:3"), rdescript="Python: Long Comment"),
+        SymbolSpecs.COMMENT:            R(Text( "# " ), rdescript="Python: Add Comment"),
+        SymbolSpecs.LONG_COMMENT:       R(Text('"""') + Key("enter"), rdescript="Python: Long Comment"),
         #                
         SymbolSpecs.NULL:               R(Text("None"), rdescript="Python: Null"),
         #
@@ -85,8 +85,7 @@ class Python(MergeRule):
         "[dot] (pie | pi)":             R(Text(".py"), rdescript="Python: .py"),
         "jason":                        R(Text("json"), rdescript="Python: json"),
         "identity is":                  R(Text(" is "), rdescript="Python: is"),
-          
-         
+        "a sign | assign":              R(Text(" = "), rdescript="Python:  assign"),
         }
 
     extras   = [Dictation("text"),]

@@ -9,14 +9,15 @@ Command-module for Chrome and Firefox
 """
 #---------------------------------------------------------------------------
 
-from aenea.strict import (Grammar, AppContext, Dictation, Key, Text, Repeat)
-
 from caster.lib import control
 from caster.lib import settings
 from caster.lib.dfplus.additions import IntegerRefST
 from caster.lib.dfplus.merge import gfilter
 from caster.lib.dfplus.merge.mergerule import MergeRule
 from caster.lib.dfplus.state.short import R
+
+from aenea.strict import (Grammar, AppContext, Dictation, Key, Text, Repeat)
+from aenea import AeneaContext, ProxyAppContext
 
 
 class ChromeRule(MergeRule):
@@ -72,7 +73,11 @@ class ChromeRule(MergeRule):
 
 #---------------------------------------------------------------------------
 
-context = AppContext(executable="chrome") 
+context = AeneaContext(
+    ProxyAppContext(cls='Google-chrome'),
+    AppContext(executable="chrome")
+    )
+
 grammar = Grammar("chrome", context=context)
 
 if settings.SETTINGS["apps"]["chrome"]:

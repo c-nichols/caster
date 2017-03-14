@@ -60,12 +60,12 @@ class NavigationNon(MappingRule):
         
         "maxiwin":                          R(Key("w-up"), rdescript="Maximize Window"),
         "move window":                      R(Key("a-space, r, a-space, m"), rdescript="Move Window"),
-        "window (left | lease) [<n>]":      R(Key("w-left"), rdescript="Window Left") * Repeat(extra="n"),
-        "window (right | ross) [<n>]":      R(Key("w-right"), rdescript="Window Right") * Repeat(extra="n"),
+        "window (left | lease) [<n>]":      R(Key("cw-left"), rdescript="Window Left") * Repeat(extra="n"),
+        "window (right | ross) [<n>]":      R(Key("cw-right"), rdescript="Window Right") * Repeat(extra="n"),
         "monitor (left | lease) [<n>]":     R(Key("sw-left"), rdescript="Monitor Left") * Repeat(extra="n"),
         "monitor (right | ross) [<n>]":     R(Key("sw-right"), rdescript="Monitor Right") * Repeat(extra="n"),
-        "(next | prior) window":            R(Key("ca-tab, enter"), rdescript="Next Window"),
-        "switch (window | windows)":        R(Key("ca-tab"), rdescript="Switch Window") * Repeat(extra="n"),
+        "(next | prior) window":            R(Key("a-tab"), rdescript="Next Window"),
+        "switch (window | windows)":        R(Key("w-w"), rdescript="Switch Window") * Repeat(extra="n"),
         
         "next tab [<n>]":                   R(Key("c-pgdown"), rdescript="Next Tab") * Repeat(extra="n"),
         "prior tab [<n>]":                  R(Key("c-pgup"), rdescript="Previous Tab") * Repeat(extra="n"),
@@ -126,6 +126,8 @@ class Navigation(MergeRule):
     
     # keyboard shortcuts
     'save':                         R(Key("c-s"), rspec="save", rdescript="Save"),
+    'lay':                          R(Key("home"), rspec="lay", rdescript="Home"),
+    'Ray':                          R(Key("end"), rspec="ray", rdescript="end"),
     'shock [<nnavi50>]':            R(Key("enter"), rspec="shock", rdescript="Enter")* Repeat(extra="nnavi50"),
     
     "(<mtn_dir> | <mtn_mode> [<mtn_dir>]) [(<nnavi500> | <extreme>)]": R(Function(textformat.master_text_nav), rdescript="Keyboard Text Navigation"),

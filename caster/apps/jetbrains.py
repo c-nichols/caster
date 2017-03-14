@@ -32,7 +32,7 @@ class JetbrainsRule(MergeRule):
         "uncomment line":           R(Key("cs-slash"), rdescript="JetBrains: Uncomment Line"), 
         "select ex":                R(Key("c-w"), rdescript="JetBrains: untitled command"), 
         "select ex down":           R(Key("cs-w"), rdescript="JetBrains: entitled command"),
-        "search everywhere":        R(Key("shift, shift"), rdescript="JetBrains: Search Everywhere"),
+        "search everywhere":        R(Key("c-dot"), rdescript="JetBrains: Search Everywhere"),
         "find in current":          R(Key("cs-f"), rdescript="JetBrains: Find In Current"),
         "go to line":               R(Key("c-g"), rdescript="JetBrains: Go To Line"),
 
@@ -50,6 +50,7 @@ class JetbrainsRule(MergeRule):
         "hide project":             R(Key("ctrl:down, tab/15, 1, ctrl:up, s-escape"), rdescript="JetBrains: hhide project panel"),
         "show project":             R(Key("a-1/15, escape"), rdescript="JetBrains: show project panel"),
         "show find":                R(Key("a-3/15, escape"), rdescript="JetBrains: show find panel"),
+        "rename":                   R(Key("s-f6"), rdescript="JetBrains:  rename"),
         }
 
     extras = [

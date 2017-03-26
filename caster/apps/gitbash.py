@@ -91,7 +91,7 @@ class GitBashRule(MergeRule):
         "mood":             R(Text("mv "), rdescript="mv"),
         "explode":          R(Text("tar -xzvf "), rdescript="tar -xzvf"),
         "staged":           R(Text("git diff --staged") + Key("enter"), rdescript="DIF staged"),
-        "scrap":            R(Text("c-charlie"), rdescript="ABORT"),
+        "scrap":            R(Text("c-c"), rdescript="ABORT"),
         "flow to":          R(Text(" | "), rdescript=" pipe"),
         "make":             R(Text("make "), rdescript="make"),
 

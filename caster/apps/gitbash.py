@@ -49,6 +49,8 @@ class GitBashRule(MergeRule):
         "CD":               R(Text( "cd " ), rdescript="GIT: Navigate Directory"),
         "list":             R(Text( "ls" )+Key("enter"), rdescript="GIT: List"),
         "make directory":   R(Text( "mkdir " ), rdescript="GIT: Make Directory"),
+        "contain":          R(Text("docker "), rdescript="Docker command"),
+        "pose":             R(Text("docker-compose "), rdescript="Docker Compose command"),
         
         
         

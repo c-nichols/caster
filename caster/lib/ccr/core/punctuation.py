@@ -16,10 +16,10 @@ class Punctuation(MergeRule):
         "thin quotes":                      R(Key("apostrophe,apostrophe,left"), rdescript="Thin Quotation Marks"),               
         "[is] greater than":                R(Key("rangle"), rdescript="> Comparison"),
         "[is] less than":                   R(Key("langle"), rdescript="< Comparison"),
-        "[is] greater [than] [or] equal [to]":  R(Key("rangle, ="), rdescript=">= Comparison"),
-        "[is] less [than] [or] equal [to]":     R(Key("langle, ="), rdescript="<= Comparison"),
-        "[is] equal to":                    R(Key("=,="), rdescript="Equality"),
-        "equals":                           R(Key("="), rdescript="Equals Sign"),
+        "[is] greater [than] [or] equal [to]":  R(Key("rangle, equal"), rdescript=">= Comparison"),
+        "[is] less [than] [or] equal [to]":     R(Key("langle, equal"), rdescript="<= Comparison"),
+        "[is] equal to":                    R(Key("equal, equal"), rdescript="Equality"),
+        "equals":                           R(Key("equal"), rdescript="Equals Sign"),
         "prekris":                          R(Key("lparen, rparen, left"), rdescript="Parentheses"),
         "brax":                             R(Key("lbracket, rbracket, left"), rdescript="Square Brackets"),
         "curly":                            R(Key("lbrace, rbrace, left"), rdescript="Curly Braces"),
@@ -49,7 +49,7 @@ class Punctuation(MergeRule):
         "tiller":                           R(Text("~"), rdescript="~"),
         
           }
- 
+
 
     extras = [
             IntegerRefST("npunc", 0, 10),
